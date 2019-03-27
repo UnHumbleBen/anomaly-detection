@@ -7,11 +7,11 @@ We use a Guassian model to detect anomalous examples in the dataset. We start on
 that have low probability and hence can be considered anomalities.
 After that, we apply the anomaly detection algorithm to a larger datset
 with many dimensions. Below is the visualization of the 2D dataset. 
-(Figure to be added later)
+![data1.mat X](figures/figure1.jpg)
 
 ## Table of Contents
 * [To-Do List](#to\-do-list)
 
 
 ## To-Do List
-- [ ] add figure of dataset
+- [X] add figure of dataset
