@@ -37,12 +37,12 @@ Sigma2(i) = (1/m) * sum( ( X(:, i) - mu(i) ) ^ 2)
 but we can also use a more efficient, vectorized implementation
 (to be added later)
 in **src/estimateGuassian.m**.
-The script in **tests/visualizeGuassian** plots the contours of the
+The script in **tests/visualizeGuassian.m** plots the contours of the
 fitted Guassian distribution.
 (figured to be added later)
 
 ## To-Do List
 - [X] add figure of dataset
-- [ ] implement src/estimateGuassian
-- [ ] implement tests/visualizeGuassian
+- [ ] implement src/estimateGuassian.m
+- [ ] implement tests/visualizeGuassian.m
 - [ ] add figure 2 for Guassian distribution contour
