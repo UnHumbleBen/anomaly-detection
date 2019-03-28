@@ -1,4 +1,4 @@
-function [mu sigma2] = estimateGuassian(X)
+function [mu sigma2] = estimateGaussian(X)
 %ESTIMATEGUASSIAN estimates the parameters of a 
 %Guassian distribution using the data in X
 %   [mu sigma2] = estimateGuassian(X),
@@ -7,8 +7,7 @@ function [mu sigma2] = estimateGuassian(X)
 %   the mean of the data set and the variance and the variances,
 %   sigma2, an n x 1 vector
 
-% Store number of training data in m
-[m ~] = size(X);
+
 % Compute mu
 mu = mean(X)';
 % Compute sigma2
