@@ -1,5 +1,6 @@
 % Initialization
 clear; close all; clc;
+addpath("../src");
 
 printf("Visualizing example dataset.\n\n");
 
@@ -18,3 +19,8 @@ ylabel("Throughput (mb/s)");
 % Print into figures
 % printf("Saving figure into figures/figure1.jpg\n");
 % print -djpg ../figures/figure1.jpg
+
+% Estimating mu and sigma2
+printf("Visualizing Guassian fit.\n");
+printf("Estimating mu and sigma2\n");
+[mu sigma2] = estimateGuassian(X);
