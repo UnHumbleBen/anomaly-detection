@@ -2,17 +2,19 @@
 Using an anomaly detection algorithm to detect anomalous behavior in server computers.
 The features measure the throughput (mb/s) and latency (ms) of response for each server.
 
+## Table of Contents
+* [Setup](#setup)
+* [Guassian distribution](#gaussian-distribution)
+* [Estimating parameters for a Guassian](#estimating-parameters-for-a-guassian)
+* [To-Do List](#to\-do-list)
+
+## Setup
 We use a Guassian model to detect anomalous examples in the dataset. We start on a
 2D dataset for visualization purposes. We fit a Guassian distribution on the dataset and find values 
 that have low probability and hence can be considered anomalities.
 After that, we apply the anomaly detection algorithm to a larger datset
 with many dimensions. Below is the visualization of the 2D dataset. 
 ![data1.mat X](figures/figure1.jpg)
-
-## Table of Contents
-* [Guassian distribution](#gaussian-distribution)
-* [Estimating parameters for a Guassian](#estimating-parameters-for-a-guassian)
-* [To-Do List](#to\-do-list)
 
 ## Gaussian distribution
 Suppose we have ```m``` examples in our dataset and
