@@ -37,7 +37,10 @@ and for the variance:
 Sigma2(i) = (1/m) * sum( ( X(:, i) - mu(i) ) ^ 2)
 ```
 but we can also use a more efficient, vectorized implementation
-(to be added later)
+```octave
+mu = mean(X);
+Sigma2 = var(X,1);
+```
 in **src/estimateGuassian.m**.
 The script in **tests/visualizeGuassian.m** plots the contours of the
 fitted Guassian distribution.
