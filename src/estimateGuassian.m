@@ -10,10 +10,10 @@ function [mu sigma2] = estimateGuassian(X)
 % Store number of training data in m
 [m ~] = size(X);
 % Compute mu
-mu = ((1/m) * sum(X))';
+mu = mean(X)';
 % Compute sigma2
 % The second 1 indicates that we want to
 % normalize with N instead of the default
 % N-1.
-sigma2 = ((1/m) * var(X, 1))';
+sigma2 = var(X, 1)';
 end
