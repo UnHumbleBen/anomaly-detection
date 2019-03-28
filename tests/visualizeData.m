@@ -35,3 +35,6 @@ printf("Visualizing the fit\n");
 visualizeFit(X, mu, sigma2);
 xlabel("Latency (ms)");
 ylabel("Throughput (mb/s)");
+
+% printf("Saving figure into figures/figure2.jpg\n");
+% print -djpg ../figures/figure2.jpg
