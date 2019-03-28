@@ -39,10 +39,12 @@ but we can also use a more efficient, vectorized implementation
 in **src/estimateGuassian.m**.
 The script in **tests/visualizeGuassian.m** plots the contours of the
 fitted Guassian distribution.
-(figured to be added later)
+![alt-text](figures/figure2.jpg)
+The yellow contour indicates a probability of 0.01 and each consecutive
+contour line is 1000 times smaller than the inner one.
 
 ## To-Do List
 - [X] add figure of dataset
-- [ ] implement src/estimateGuassian.m
-- [ ] implement tests/visualizeGuassian.m
-- [ ] add figure 2 for Guassian distribution contour
+- [X] implement src/estimateGuassian.m
+- [X] implement tests/visualizeGuassian.m
+- [X] add figure 2 for Guassian distribution contour
