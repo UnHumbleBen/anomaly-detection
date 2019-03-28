@@ -21,6 +21,17 @@ ylabel("Throughput (mb/s)");
 % print -djpg ../figures/figure1.jpg
 
 % Estimating mu and sigma2
-printf("Visualizing Guassian fit.\n");
+printf("Visualizing Gaussian fit.\n");
 printf("Estimating mu and sigma2\n");
-[mu sigma2] = estimateGuassian(X);
+[mu sigma2] = estimateGaussian(X);
+
+% Compute the probability of each
+% example of X
+printf("Computing probability density for X\n");
+p = multivariateGaussian(X, mu, sigma2);
+
+% Visualize the fit
+printf("Visualizing the fit\n");
+visualizeFit(X, mu, sigma2);
+xlabel("Latency (ms)");
+ylabel("Throughput (mb/s)");
