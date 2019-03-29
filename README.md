@@ -71,6 +71,20 @@ In practice, datasets will have more than just 2 dimensions. **data/data2.mat** 
 a dataset with 11 features. The script in **tests/highDimensionalDataset.m** will estimate the
 Guassian parameters, evaluate the probabilties for the training data and then use the
 cross-validation set to find the best epsilon. 
+The output of the script:
+```octave
+Loading X, Xval, and yval into environment ...
+Estimating Gaussian ...
+Computing probabilities in training set ...
+Computing probabilities in cross-validation set ...
+Finding the best threshold ...
+
+Best epsilon: 1.377229e-18
+Expected    : 1.38e-18
+Best F1     : 0.615385
+Expected    : 0.615385
+Outliers found: 117
+```
 
 ## To-Do List
 - [X] add figure of dataset
@@ -80,9 +94,9 @@ cross-validation set to find the best epsilon.
 - [X] selecting the threshold
   - [X] implement src/selectThreshold.m
   - [X] add figure for outliers
-- [ ] high dimensional dataset
-  - [ ] implement tests/highDimensionalDataset.m
-  - [ ] show results
+- [X] high dimensional dataset
+  - [X] implement tests/highDimensionalDataset.m
+  - [X] show results
 - [ ] README.md tweaks
   - [ ] details for *F<sub>1</sub>* score computation
   - [ ] vectorized implementations for *F<sub>1</sub>* score
