@@ -50,3 +50,14 @@ printf("Best epsilon found using cross-validation: %e\n", epsilon);
 printf("Expected value for epsilon               : 8.99e-05\n");
 printf("Best F1 on Cross Validation Set: %f\n", F1);
 printf("Expected value for best F1     : 0.875000)\n\n");
+
+% find outliers
+outliers = find(p < epsilon);
+
+% Draw a red circle around outliers
+hold on
+plot(X(outliers, 1), X(outliers, 2), 'ro', 'LineWidth', 2, 'MarkerSize', 10);
+hold off
+
+% printf("Saving figure into figures/figure3.jpg\n");
+% print -djpg ../figures/figure3.jpg
