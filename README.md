@@ -62,18 +62,18 @@ of values (0 for normal, 1 for anomally) ```yval``` and ```pval``` to compute
 the best threshold ```bestEpsilon``` and the best *F<sub>1</sub>* score ```bestF1```.
 
 The script in **tests/findOutliers.m** runs the functions above to find the outliers
-and plot them.
-(Figure to be added later)
+and plot them (shown below).
+![Outliers](figures/figure3.jpg)
 
 ## To-Do List
 - [X] add figure of dataset
 - [X] implement src/estimateGuassian.m
 - [X] implement tests/visualizeGuassian.m
 - [X] add figure 2 for Guassian distribution contour
-- [ ] selecting the threshold
-  - [ ] implement src/selectThreshold.m
-  - [ ] create test for selectThreshold() in tests/findOutliers.m
-  - [ ] add figure for outliers
+- [X] selecting the threshold
+  - [X] implement src/selectThreshold.m
+  - [X] create test for selectThreshold() in tests/findOutliers.m
+  - [X] add figure for outliers
 - [ ] README.md tweaks
   - [ ] details for *F<sub>1</sub>* score computation
   - [ ] vectorized implementations for *F<sub>1</sub>* score
