@@ -19,9 +19,9 @@ for epsilon = min(pval):stepsize:max(pval)
 
     %% compute F1 score
     % values
-    numTruePositive = sum(prediction == 1 & yval == 1);
-    numFalsePositive = sum(prediction == 1 & yval == 0);
-    numFalseNegative = sum(prediction == 0 & yval == 1);
+    numTruePositive = sum(predictions == 1 & yval == 1);
+    numFalsePositive = sum(predictions == 1 & yval == 0);
+    numFalseNegative = sum(predictions == 0 & yval == 1);
 
     % precision (number of correctly classified 
     % positives out of all positives classified)
