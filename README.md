@@ -10,7 +10,8 @@ The features measure the throughput (mb/s) and latency (ms) of response for each
 * [To-Do List](#to\-do-list)
 
 ## Setup
-We use a Guassian model to detect anomalous examples in the dataset. We start on a
+We use a Guassian model to detect anomalous examples in the dataset. The dataset
+is contained in **data/data1.mat**. We start on a
 2D dataset for visualization purposes. We fit a Guassian distribution on the dataset and find values 
 that have low probability and hence can be considered anomalities.
 After that, we apply the anomaly detection algorithm to a larger datset
@@ -73,3 +74,6 @@ and plot them.
   - [ ] implement src/selectThreshold.m
   - [ ] create test for selectThreshold() in tests/findOutliers.m
   - [ ] add figure for outliers
+- [ ] README.md tweaks
+  - [ ] details for *F<sub>1</sub>* score computation
+  - [ ] vectorized implementations for *F<sub>1</sub>* score
