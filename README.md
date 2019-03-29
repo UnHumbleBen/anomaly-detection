@@ -7,6 +7,7 @@ The features measure the throughput (mb/s) and latency (ms) of response for each
 * [Guassian distribution](#gaussian-distribution)
 * [Estimating parameters for a Guassian](#estimating-parameters-for-a-guassian)
 * [Selecting the threshold](#selecting-the-threshold)
+* [High dimensional dataset](#high-dimensional-dataset)
 * [To-Do List](#to\-do-list)
 
 ## Setup
@@ -65,6 +66,12 @@ The script in **tests/findOutliers.m** runs the functions above to find the outl
 and plot them (shown below).
 ![Outliers](figures/figure3.jpg)
 
+## High Dimensional Dataset
+In practice, datasets will have more than just 2 dimensions. **data/data2.mat** contains
+a dataset with 11 features. The script in **tests/highDimensionalDataset.m** will estimate the
+Guassian parameters, evaluate the probabilties for the training data and then use the
+cross-validation set to find the best epsilon. 
+
 ## To-Do List
 - [X] add figure of dataset
 - [X] implement src/estimateGuassian.m
@@ -72,8 +79,10 @@ and plot them (shown below).
 - [X] add figure 2 for Guassian distribution contour
 - [X] selecting the threshold
   - [X] implement src/selectThreshold.m
-  - [X] create test for selectThreshold() in tests/findOutliers.m
   - [X] add figure for outliers
+- [ ] high dimensional dataset
+  - [ ] implement tests/highDimensionalDataset.m
+  - [ ] show results
 - [ ] README.md tweaks
   - [ ] details for *F<sub>1</sub>* score computation
   - [ ] vectorized implementations for *F<sub>1</sub>* score
