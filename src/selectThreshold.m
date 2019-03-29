@@ -13,7 +13,7 @@ bestF1 = 0;
 %% setting step size to be 1000 steps between min and max probability
 stepsize = (max(pval) - min(pval)) / 1000;
 %% looping over the probabilites thresholds in stepsize increments
-for epsilon = min(pval):stepsize:max(pval)
+for epsilon = (min(pval) + stepsize):stepsize:max(pval)
     % get a prediction vector for current epsilon
     predictions = (pval < epsilon);
 
