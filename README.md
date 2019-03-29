@@ -6,6 +6,7 @@ The features measure the throughput (mb/s) and latency (ms) of response for each
 * [Setup](#setup)
 * [Guassian distribution](#gaussian-distribution)
 * [Estimating parameters for a Guassian](#estimating-parameters-for-a-guassian)
+* [Selecting the threshold](#selecting-the-threshold)
 * [To-Do List](#to\-do-list)
 
 ## Setup
@@ -48,8 +49,27 @@ fitted Guassian distribution.
 The yellow contour indicates a probability of 0.01 and each consecutive
 contour line is 1000 times smaller than the inner one.
 
+## Selecting the Threshold
+After estimating the Guassian parameters, we can estimate the probability 
+of each example in the script **src/multivariateGuassian.m** which returns
+a *m x 1* vector ```pval``` of the probabilities for each training example.
+Since low probability examples are more likely to be
+anomalies, we select a threshold based on a cross validation set. 
+
+The function in **src/selectThreshold.m** takes in the cross validation vector
+of values (0 for normal, 1 for anomally) ```yval``` and ```pval``` to compute
+the best threshold ```bestEpsilon``` and the best *F<sub>1</sub>* score ```bestF1```.
+
+The script in **tests/findOutliers.m** runs the functions above to find the outliers
+and plot them.
+(Figure to be added later)
+
 ## To-Do List
 - [X] add figure of dataset
 - [X] implement src/estimateGuassian.m
 - [X] implement tests/visualizeGuassian.m
 - [X] add figure 2 for Guassian distribution contour
+- [ ] selecting the threshold
+  - [ ] implement src/selectThreshold.m
+  - [ ] create test for selectThreshold() in tests/findOutliers.m
+  - [ ] add figure for outliers
