@@ -40,6 +40,13 @@ ylabel("Throughput (mb/s)");
 % print -djpg ../figures/figure2.jpg
 
 % Find Outliers
+printf("Computing probabilities for cross-validation\n");
 pval = multivariateGaussian(Xval, mu, sigma2);
 
+printf("Computing best threshold\n");
 [epsilon F1] = selectThreshold(yval, pval);
+%% The '%e' format specifier specifies exponential notation
+printf("Best epsilon found using cross-validation: %e\n", epsilon);
+printf("Expected value for epsilon               : 8.99e-05\n");
+printf("Best F1 on Cross Validation Set: %f\n", F1);
+printf("Expected value for best F1     : 0.875000)\n\n");
