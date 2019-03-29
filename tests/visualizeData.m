@@ -38,3 +38,8 @@ ylabel("Throughput (mb/s)");
 
 % printf("Saving figure into figures/figure2.jpg\n");
 % print -djpg ../figures/figure2.jpg
+
+% Find Outliers
+pval = multivariateGaussian(Xval, mu, sigma2);
+
+[epsilon F1] = selectThreshold(yval, pval);
